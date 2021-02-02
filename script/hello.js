@@ -2,22 +2,15 @@
 const money = prompt('Ваш месячный доход?');
 const addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую');
 const mission = 6305;
-let deposit = prompt('Есть ли у вас дпозит в банке?');
-switch (deposit) {
-    case 'Да':
-        deposit = true;
-        break;
-    case 'Нет':
-        deposit = false;
-        break;
-}
+
+let deposit = confirm('Есть ли у вас дпозит в банке?');
 
 console.log(typeof deposit);
 console.log(deposit);
 
 const expenses1 = prompt('Введите обязательную статью расходов');
-const expenses2 = prompt('Введите обязательную статью расходов');
 const amount1 = prompt ('Во сколько это обойдется?');
+const expenses2 = prompt('Введите обязательную статью расходов');
 const amount2 = prompt ('Во сколько это обойдется?');
 
 
@@ -26,8 +19,8 @@ const budgetMonth = money - amount1 - amount2;
 console.log('Миссия будет достигнута за ' + Math.ceil(mission / budgetMonth) + ' месяцев');
 
 const income = 'Макдональдс',
-period = 5,
-budgetDay = budgetMonth / 30;
+    period = 5,
+    budgetDay = budgetMonth / 30;
 console.log('Бюджет на день ' + Math.floor(budgetDay));
 
 if (budgetDay >= 1200) {
@@ -54,9 +47,6 @@ console.log('Цель заработать ' + mission + ' рублей');
 
 console.log(addExpenses.toLowerCase().split(', '));
 
-console.log(budgetDay);
-console.log(budgetDay);
-console.log(budgetDay);
 
 
 
