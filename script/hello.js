@@ -27,7 +27,7 @@ const money = prompt('Ваш месячный доход?'),
         console.log(income);
     },
 
-    budgetDay = accumulatedMonth() / 30;
+    budgetDay = getAccumulatedMonth() / 30;
 
 if (budgetDay >= 1200) {
     console.log('У вас высокий уровень дохода');
