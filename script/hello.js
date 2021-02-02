@@ -1,5 +1,5 @@
 'use strict';
-const money = prompt('Ваш месячный доход?'),
+const money = +prompt('Ваш месячный доход?'),
     addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую'),
     mission = 6305,
     deposit = confirm('Есть ли у вас дпозит в банке?'),
@@ -25,6 +25,7 @@ else if (budgetDay < 0) {
     console.log('Что-то пошло не так');
 } 
 
+console.log(budgetMonth);
 console.log('Миссия будет достигнута за ' + Math.ceil(mission / budgetMonth) + ' месяцев');
 console.log('Бюджет на день ' + Math.floor(budgetDay));
 console.log(typeof money);
