@@ -7,16 +7,10 @@ const money = prompt('Ваш месячный доход?'),
     amount1 = +prompt ('Во сколько это обойдется?'),
     expenses2 = prompt('Введите обязательную статью расходов'),
     amount2 = +prompt ('Во сколько это обойдется?'),
-    budgetMonth = money - amount1 - amount2;
-
-console.log('ДОлжна быть number ' + typeof amount1);
-
-console.log('Миссия будет достигнута за ' + Math.ceil(mission / budgetMonth) + ' месяцев');
-
-const income = 'Макдональдс',
+    budgetMonth = money - amount1 - amount2,
+    income = 'Макдональдс',
     period = 5,
     budgetDay = budgetMonth / 30;
-console.log('Бюджет на день ' + Math.floor(budgetDay));
 
 if (budgetDay >= 1200) {
     console.log('У вас высокий уровень дохода');
@@ -30,7 +24,9 @@ else if ((budgetDay < 600) && (budgetDay >= 0)) {
 else if (budgetDay < 0) {
     console.log('Что-то пошло не так');
 } 
-  
+
+console.log('Миссия будет достигнута за ' + Math.ceil(mission / budgetMonth) + ' месяцев');
+console.log('Бюджет на день ' + Math.floor(budgetDay));
 console.log(typeof money);
 console.log(typeof income);
 console.log(typeof deposit);
