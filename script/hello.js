@@ -1,13 +1,13 @@
 'use strict';
 const money = prompt('Ваш месячный доход?'),
-addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую'),
-mission = 6305,
-deposit = confirm('Есть ли у вас дпозит в банке?'),
-expenses1 = prompt('Введите обязательную статью расходов'),
-amount1 = prompt ('Во сколько это обойдется?'),
-expenses2 = prompt('Введите обязательную статью расходов'),
-amount2 = prompt ('Во сколько это обойдется?'),
-budgetMonth = money - amount1 - amount2;
+    addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую'),
+    mission = 6305,
+    deposit = confirm('Есть ли у вас дпозит в банке?'),
+    expenses1 = prompt('Введите обязательную статью расходов'),
+    amount1 = prompt ('Во сколько это обойдется?'),
+    expenses2 = prompt('Введите обязательную статью расходов'),
+    amount2 = prompt ('Во сколько это обойдется?'),
+    budgetMonth = money - amount1 - amount2;
 
 console.log('Миссия будет достигнута за ' + Math.ceil(mission / budgetMonth) + ' месяцев');
 
