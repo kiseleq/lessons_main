@@ -1,21 +1,14 @@
 'use strict';
-const money = prompt('Ваш месячный доход?');
-const addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую');
-const mission = 6305;
+const money = prompt('Ваш месячный доход?'),
+addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую'),
+mission = 6305,
+deposit = confirm('Есть ли у вас дпозит в банке?'),
+expenses1 = prompt('Введите обязательную статью расходов'),
+amount1 = prompt ('Во сколько это обойдется?'),
+expenses2 = prompt('Введите обязательную статью расходов'),
+amount2 = prompt ('Во сколько это обойдется?'),
+budgetMonth = money - amount1 - amount2;
 
-let deposit = confirm('Есть ли у вас дпозит в банке?');
-
-console.log(typeof deposit);
-console.log(deposit);
-
-const expenses1 = prompt('Введите обязательную статью расходов');
-const amount1 = prompt ('Во сколько это обойдется?');
-const expenses2 = prompt('Введите обязательную статью расходов');
-const amount2 = prompt ('Во сколько это обойдется?');
-
-
-
-const budgetMonth = money - amount1 - amount2;
 console.log('Миссия будет достигнута за ' + Math.ceil(mission / budgetMonth) + ' месяцев');
 
 const income = 'Макдональдс',
