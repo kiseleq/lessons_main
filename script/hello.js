@@ -17,13 +17,14 @@ const money = +prompt('Ваш месячный доход?'),
         return money - getExpensesMonth();
     },
     accumulatedMonth = getAccumulatedMonth(),
-    getTargetMonth = function () {
-        return mission / accumulatedMonth;
-    },
     showTypeOf = function(varible) {
         return console.log(typeof varible);
     },
-    budgetDay = getAccumulatedMonth() / 30,
+    getTargetMonth = function () {
+        return Math.floor(mission / accumulatedMonth);
+    };
+
+    let budgetDay = getAccumulatedMonth() / 30,
     getStatusIncome = function () {
         if (budgetDay >= 1200) {
             console.log('У вас высокий уровень дохода');
@@ -38,6 +39,8 @@ const money = +prompt('Ваш месячный доход?'),
             console.log('Что-то пошло не так');
         } 
     };
+
+budgetDay = Math.floor(budgetDay);
 
 console.log('Бюджет на день ' + Math.floor(budgetDay));
 showTypeOf(money);
