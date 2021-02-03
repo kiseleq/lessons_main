@@ -88,8 +88,7 @@ if (getTargetMonth() > 0 ){
         console.log('Цель не будет достигнута');
     }
 
-
-
+    
 
 
 
