@@ -8,12 +8,13 @@ const isNumber = function(n) {
  
 const start = function() {
         do {
-            money = +prompt('Ваш месячный доход?');
+            money = prompt('Ваш месячный доход?');
         }
         while(!isNumber(money));
     };
 
 start();
+money = +(money);
 
 const 
     addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую'),
@@ -22,27 +23,28 @@ const
     income = 'Макдональдс',
     period = 5;
 
+let sum = 0;
+let sum1;
 let expenses = [];
 const getExpensesMonth = function() {
-        let sum = 0;
 
         for (let i=0; i < 2; i++){
-            
+
             expenses[i] = prompt('Введите обязательную статью расходов');
             
             do {
-                sum += +prompt('Во сколько вам это обойдётся?');
+                sum1 = prompt('Во сколько вам это обойдётся?');
             }
-            while(!isNumber(sum));
-
+            while(!isNumber(sum1));
+            sum += sum1;
             
         }
-
-        console.log(sum);
+        sum = +sum;
         return sum;
-    },
+    };
+    
 
-    expensesAmount = getExpensesMonth(),
+   const expensesAmount = getExpensesMonth(),
 
     getAccumulatedMonth = function () {
         return money - expensesAmount;
@@ -78,10 +80,11 @@ console.log(expensesAmount);
 console.log(addExpenses.toLowerCase().split(', '));
 getStatusIncome();
 
-if (getTargetMonth() > 0 ){
+if (getTargetMonth() > 0 && isFinite(getTargetMonth())){
+    
     console.log('Цель будет достигнута за ' + getTargetMonth() + ' месяцев(-а)');
 }
-    else {
+
+    else  {
         console.log('Цель не будет достигнута');
     }
-
