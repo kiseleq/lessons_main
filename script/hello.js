@@ -1,12 +1,14 @@
 'use strict';
 
+let money,
+    sum = 0,
+    sum1,
+    expenses = [];
+
 const isNumber = function(n) {
     return !isNaN(parseFloat(n)) && isFinite(n);
-};
-
- let money;
- 
-const start = function() {
+},
+    start = function() {
         do {
             money = prompt('Ваш месячный доход?');
         }
@@ -23,29 +25,25 @@ const
     income = 'Макдональдс',
     period = 5;
 
-let sum = 0;
-let sum1;
-let expenses = [];
 const getExpensesMonth = function() {
 
-        for (let i=0; i < 2; i++){
+    for (let i=0; i < 2; i++) {
 
-            expenses[i] = prompt('Введите обязательную статью расходов');
+        expenses[i] = prompt('Введите обязательную статью расходов');
             
-            do {
-                sum1 = prompt('Во сколько вам это обойдётся?');
-            }
-            while(!isNumber(sum1));
+        do {
+            sum1 = prompt('Во сколько вам это обойдётся?');
+        }
+        while(!isNumber(sum1));
             sum1 = +sum1;
             sum += sum1;
-            
         }
+
         sum = sum;
         return sum;
-    };
+    },
     
-
-   const expensesAmount = getExpensesMonth(),
+    expensesAmount = getExpensesMonth(),
 
     getAccumulatedMonth = function () {
         return money - expensesAmount;
