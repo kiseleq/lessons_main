@@ -36,10 +36,11 @@ const getExpensesMonth = function() {
                 sum1 = prompt('Во сколько вам это обойдётся?');
             }
             while(!isNumber(sum1));
+            sum1 = +sum1;
             sum += sum1;
             
         }
-        sum = +sum;
+        sum = sum;
         return sum;
     };
     
