@@ -40,7 +40,7 @@ let appData = {
 };
 
 appData.asking();
- 
+
     appData.getExpensesMonth = function() {
 
     for (let i=0; i < 2; i++) {
@@ -97,3 +97,4 @@ if (appData.getTargetMonth() > 0 && isFinite(appData.getTargetMonth())){
     else  {
         console.log('Цель не будет достигнута');
     }
+//По идее все правильно (задание до 6 пункта)
