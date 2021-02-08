@@ -31,7 +31,7 @@ const appData = {
 
     asking: function() {
         const addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую');
-        appData.addExpenses = addExpenses.toLowerCase().split(', ');
+        if (addExpenses !== null){appData.addExpenses = addExpenses.toLowerCase().split(', ');}
         appData.deposit = confirm('Есть ли у вас дпозит в банке?');
         let sum;
 
@@ -84,6 +84,9 @@ appData.accumulatedMonth = appData.getBudget();
 
 appData.getStatusIncome();
 
+console.log( appData.expenses );
+console.log("Расходы за месяц " + appData.expensesMonth );
+
 if (appData.getTargetMonth() > 0 && isFinite(appData.getTargetMonth())){
     
     console.log('Цель будет достигнута за ' + appData.getTargetMonth() + ' месяцев(-а)');
@@ -92,9 +95,6 @@ if (appData.getTargetMonth() > 0 && isFinite(appData.getTargetMonth())){
 else {
     console.log('Цель не будет достигнута');
 }
-
-console.log( appData.expenses );
-console.log("Расходы за месяц " + appData.expensesMonth );
 
 console.log('Наша программа включает в себя данные: ');
 for (let key1 in appData) {
