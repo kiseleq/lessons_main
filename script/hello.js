@@ -37,7 +37,7 @@ const appData = {
 
     for (let i = 0; i < 2; i++) {
         let res;
-        do {res = prompt('Введите обязательную статью расходов');} while (res === null);
+        do {res = prompt('Введите обязательную статью расходов');} while (res === null || res.trim().length == 0);
 
         do {
             sum = prompt('Во сколько вам это обойдется');
