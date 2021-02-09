@@ -39,12 +39,12 @@ const appData = {
             
             let cashIncome;
             do {cashIncome = prompt('Сколько в месяц вы на этом зарабатываете?');} while (cashIncome === null || cashIncome.trim().length == 0 || !isNumber(cashIncome));
-            
+            cashIncome = +cashIncome;
             appData.income[itemIncome] = cashIncome;
         }
 
         let addExpenses;
-        do {addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую');} while (isNumber(addExpenses));
+        do {addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую');} while (isNumber(addExpenses) || addExpenses === null || addExpenses.trim().length == 0);
 
         if (addExpenses !== null){appData.addExpenses = addExpenses.toLowerCase().split(', ');}
 
@@ -98,8 +98,10 @@ const appData = {
         if(appData.deposit){
 
             do {appData.percentDeposit = prompt('Какой годовой процент?')} while (appData.percentDeposit === null || appData.percentDeposit.trim().length == 0 || !isNumber(appData.percentDeposit));
-            
+            appData.percentDeposit = +appData.percentDeposit;
+
             do {appData.moneyDeposit = prompt('Какая сумма заложена?')} while (appData.moneyDeposit === null || appData.moneyDeposit.trim().length == 0 || !isNumber(appData.moneyDeposit));
+            appData.moneyDeposit = +appData.moneyDeposit;
         }
     },
     calcSavedMonth: function(){
