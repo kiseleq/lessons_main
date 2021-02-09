@@ -144,3 +144,25 @@ for (let key1 in appData) {
     { console.log(key1 + " : " + appData[key1]);}
 }
 
+const btnStart = document.getElementById('#start'),
+    btnPlus1 = document.getElementsByTagName('button')[0],
+    btnPlus2 = document.getElementsByTagName('button')[1],
+    checkbox = document.querySelector('#deposit_check'),
+    additionsIncome = document.querySelectorAll('.additional-income_item'),
+
+    resBudgetMonth = document.getElementsByClassName('.result-budget_month'),
+    resBudgetDay = document.getElementsByClassName('.result-budget_day'),
+    resExpensesMonth = document.getElementsByClassName('.result-expenses_month'),
+    resAdditionIncome = document.getElementsByClassName('.result-additional_income'),
+    resAdditionExp = document.getElementsByClassName('.result-additional_expenses'),
+    resIncomePeriod = document.getElementsByClassName('.result-income_period'),
+    resTargetMonth = document.getElementsByClassName('.result-target_month'),
+    
+    salaryAmount = document.getElementsByClassName('.salary-amount'),
+    adIncomeTitle = document.getElementsByClassName('.income-title'),
+    adIncomeAmount = document.getElementsByClassName('.income-amount'),
+    expensesTitle = document.getElementsByClassName('.expenses-title'),
+    expensesAmount = document.getElementsByClassName('.expenses-amount'),
+    adExpensesTitle = document.getElementsByClassName('.addidional_expenses-item'),
+    targetAmount = document.getElementsByClassName('.target-amount'),
+    periodSelect = document.getElementsByClassName('.period-select'),
