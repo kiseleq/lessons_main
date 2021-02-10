@@ -150,22 +150,22 @@ const btnStart = document.getElementById('start'),
     checkBox = document.querySelector('.deposit-checkmark'),
     additionalIncome = document.querySelectorAll('.additional_income-item'),
 
-    resBudgetMonth = document.getElementsByClassName('result-budget_month'),
-    resBudgetDay = document.getElementsByClassName('result-budget_day'),
-    resExpensesMonth = document.getElementsByClassName('result-expenses_month'),
-    resAdditionIncome = document.getElementsByClassName('result-additional_income'),
-    resAdditionExp = document.getElementsByClassName('result-additional_expenses'),
-    resIncomePeriod = document.getElementsByClassName('result-income_period'),
-    resTargetMonth = document.getElementsByClassName('result-target_month'),
+    resBudgetMonth = document.getElementsByClassName('result-budget_month')[0],
+    resBudgetDay = document.getElementsByClassName('result-budget_day')[0],
+    resExpensesMonth = document.getElementsByClassName('result-expenses_month')[0],
+    resAdditionIncome = document.getElementsByClassName('result-additional_income')[0],
+    resAdditionExp = document.getElementsByClassName('result-additional_expenses')[0],
+    resIncomePeriod = document.getElementsByClassName('result-income_period')[0],
+    resTargetMonth = document.getElementsByClassName('result-target_month')[0],
     
-    salaryAmount = document.getElementsByClassName('salary-amount'),
-    adIncomeTitle = document.getElementsByClassName('income-title'),
-    adIncomeAmount = document.getElementsByClassName('income-amount'),
-    expensesTitle = document.getElementsByClassName('expenses-title'),
-    expensesAmount = document.getElementsByClassName('expenses-amount'),
-    adExpensesTitle = document.getElementsByClassName('additional_expenses-title'),
-    targetAmount = document.getElementsByClassName('target-amount'),
-    periodSelect = document.getElementsByClassName('period-select');
+    salaryAmount = document.getElementsByClassName('salary-amount')[0],
+    adIncomeTitle = document.getElementsByClassName('income-title')[0],
+    adIncomeAmount = document.getElementsByClassName('income-amount')[0],
+    expensesTitle = document.getElementsByClassName('expenses-title')[0],
+    expensesAmount = document.getElementsByClassName('expenses-amount')[0],
+    adExpensesTitle = document.getElementsByClassName('additional_expenses-title')[0],
+    targetAmount = document.getElementsByClassName('target-amount')[0],
+    periodSelect = document.getElementsByClassName('period-select')[0];
 
 console.dir(btnStart);
 console.dir(btnPlus1);
