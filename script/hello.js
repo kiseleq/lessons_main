@@ -145,49 +145,57 @@
 // }
 
 const btnStart = document.getElementById('start'),
-    btnPlus1 = document.getElementsByTagName('button')[0],
-    btnPlus2 = document.getElementsByTagName('button')[1],
-    checkBox = document.querySelector('.deposit-checkmark'),
+    incomeAdd = document.getElementsByTagName('button')[0],
+    expensesAdd = document.getElementsByTagName('button')[1],
+    depositCheck = document.querySelector('#deposit-check'),
     additionalIncome = document.querySelectorAll('.additional_income-item'),
 
-    resBudgetMonth = document.getElementsByClassName('result-budget_month')[0],
-    resBudgetDay = document.getElementsByClassName('result-budget_day')[0],
-    resExpensesMonth = document.getElementsByClassName('result-expenses_month')[0],
-    resAdditionIncome = document.getElementsByClassName('result-additional_income')[0],
-    resAdditionExp = document.getElementsByClassName('result-additional_expenses')[0],
-    resIncomePeriod = document.getElementsByClassName('result-income_period')[0],
-    resTargetMonth = document.getElementsByClassName('result-target_month')[0],
+    resBudgetMonth = document.getElementsByClassName('result-total')[0],
+    resBudgetDay = document.getElementsByClassName('result-total')[1],
+    resExpensesMonth = document.getElementsByClassName('result-total')[2],
+    resAdditionIncome = document.getElementsByClassName('result-total')[3],
+    resAdditionExp = document.getElementsByClassName('result-total')[4],
+    resIncomePeriod = document.getElementsByClassName('result-total')[5],
+    resTargetMonth = document.getElementsByClassName('result-total')[6],
     
-    salaryAmount = document.getElementsByClassName('salary-amount')[0],
-    adIncomeTitle = document.getElementsByClassName('income-title')[0],
-    adIncomeAmount = document.getElementsByClassName('income-amount')[0],
-    expensesTitle = document.getElementsByClassName('expenses-title')[0],
-    expensesAmount = document.getElementsByClassName('expenses-amount')[0],
-    adExpensesTitle = document.getElementsByClassName('additional_expenses-title')[0],
-    targetAmount = document.getElementsByClassName('target-amount')[0],
-    periodSelect = document.getElementsByClassName('period-select')[0];
+    salaryAmount = document.querySelector('.salary-amount'),
+    adIncomeTitle = document.querySelector('input.income-title'),
+    adIncomeAmount = document.querySelector('.income-amount'),
+    expensesTitle = document.querySelector('input.expenses-title'),
+    expensesAmount = document.querySelector('.expenses-amount'),
+    adExpensesTitle = document.querySelector('.additional_expenses-item'),
+    targetAmount = document.querySelector('.target-amount'),
+    periodSelect = document.querySelector('.period-select'),
 
-console.dir(btnStart);
-console.dir(btnPlus1);
-console.dir(checkBox);
-console.dir(additionalIncome);
+    //часть скрытых
+    depositAmount = document.querySelector('.deposit-amount'),
+    depositPercent = document.querySelector('.deposit-percent'),
+    depositBank = document.querySelector('.deposit-bank');
 
-console.dir(resBudgetMonth);
-console.dir(resBudgetDay);
-console.dir(resExpensesMonth);
-console.dir(resAdditionIncome);
-console.dir(resAdditionExp);
-console.dir(resIncomePeriod);
-console.dir(resTargetMonth);
+console.log(btnStart);
+console.log(incomeAdd);
+console.log(expensesAdd);
+console.log(depositCheck);
+console.log(additionalIncome);
 
-console.dir(salaryAmount);
-console.dir(adIncomeTitle);
-console.dir(adIncomeAmount);
-console.dir(expensesTitle);
-console.dir(expensesAmount);
-console.dir(adExpensesTitle);
-console.dir(targetAmount);
-console.dir(periodSelect); 
+console.log(resBudgetMonth);
+console.log(resBudgetDay);
+console.log(resExpensesMonth);
+console.log(resAdditionIncome);
+console.log(resAdditionExp);
+console.log(resIncomePeriod);
+console.log(resTargetMonth);
+
+console.log(salaryAmount);
+console.log(adIncomeTitle);
+console.log(adIncomeAmount);
+console.log(expensesTitle);
+console.log(expensesAmount);
+console.log(adExpensesTitle);
+console.log(targetAmount);
+console.log(periodSelect); 
     
-    
+console.log(depositAmount);   
+console.log(depositPercent);   
+console.log(depositBank);   
     
