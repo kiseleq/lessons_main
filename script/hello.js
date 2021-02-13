@@ -142,7 +142,7 @@ const appData = {
         additionalIncome.forEach(function(item){
             let itemValue = item.value.trim();
             if (itemValue !==''){
-                appData.addIncome.push(itemValue[0].toUpperCase() + itemValue.slice().toLowerCase());
+                appData.addIncome.push(itemValue[0].toUpperCase() + itemValue.slice(1).toLowerCase());
             }
         });
 
@@ -235,7 +235,7 @@ const appData = {
     },
 
     periodAmount: function(){
-        periodSelect.addEventListener('change', function(){titlePeriodAmount.textContent = periodSelect.value;});
+        periodSelect.addEventListener('input', function(){titlePeriodAmount.textContent = periodSelect.value;});
     },
       
     numBudget: function(){
