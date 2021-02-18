@@ -286,8 +286,11 @@ appData.periodAmount();
 expensesAdd.addEventListener('click', appData.addExpensesBlock);
 incomeAdd.addEventListener('click', appData.addIncomeBlock);
 
-btnStart.addEventListener('click', appData.start);
-btnCancel.addEventListener('click', appData.reset);
+let start1 = appData.start.bind(appData),
+reset1 = appData.reset.bind(appData);
+
+btnStart.addEventListener('click', start1);
+btnCancel.addEventListener('click', reset1);
 
 appData.accumulatedMonth = appData.getBudget();
 
