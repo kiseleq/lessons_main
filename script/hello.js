@@ -139,7 +139,7 @@ const appData = {
         resAdditionIncome.value = this.addIncome.join(', ');
         resTargetMonth.value = this.getTargetMonth();
         resIncomePeriod.value = this.calcSavedMonth();
-        periodSelect.addEventListener('input', () => {resIncomePeriod.value = periodSelect.value * this.calcSavedMonth();})
+        periodSelect.addEventListener('input', () => {resIncomePeriod.value = this.calcSavedMonth();})
     
     },
 
@@ -227,7 +227,7 @@ const appData = {
     },
     getTargetMonth: function() {
 
-        return Math.ceil(targetAmount.value / this.budgetMonth);
+        return Math.ceil(targetAmount.value / this.budgetMonth)
         
     },
 
@@ -246,8 +246,9 @@ const appData = {
     // },
     
     calcSavedMonth: function() {
-        
+
         return (this.budgetMonth - resExpensesMonth.value) * periodSelect.value;
+        
     },
 
     periodAmount:   function() {
