@@ -110,6 +110,21 @@ const appData = {
             resTargetMonth.value = 'Срок';
         });
 
+        let allIncomeItems = document.querySelectorAll('.income-items');
+        if (allIncomeItems[1]){
+            allIncomeItems[1].remove();
+        }
+        if (allIncomeItems[2]){
+            allIncomeItems[2].remove();
+        }
+
+        let allExpensesItems = document.querySelectorAll('.expenses-items');
+        if (allExpensesItems[1]){
+            allExpensesItems[1].remove();
+        }
+        if (allExpensesItems[2]){
+            allExpensesItems[2].remove();
+        }
 
         this.showBtnStart();
         this.frezeInput();
@@ -158,7 +173,6 @@ const appData = {
             const cashIncome = +item.querySelector('.income-amount').value;
             if(itemIncome !== '' && cashIncome !== '') {
                 this.income[itemIncome] = cashIncome;
-                console.log(this.income[itemIncome]);
             }
         });
     },
@@ -274,6 +288,8 @@ const appData = {
 
         periodSelect.disabled = false;
     },
+
+
     
 };
 
