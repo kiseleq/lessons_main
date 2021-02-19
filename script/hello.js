@@ -93,56 +93,18 @@ const appData = {
 
         appData.showResult();
         
-        salaryAmount.value = '';
-        periodSelect.value = 1;
-        titlePeriodAmount.textContent = 1;
-        adExpensesTitle.value = '';
-        targetAmount.value = '';
-        depositCheck.checked = false;
-        
-        let allIncomeTitles = document.querySelectorAll('input.income-title'),
-            allincomeAmounts = document.querySelectorAll('.income-amount'),
-            adIncomeItem = document.querySelectorAll('.additional_income-item'),
-            inputExpensesTitle = document.querySelectorAll('input.expenses-title'),
-            inputExpensesAmount = document.querySelectorAll('input.expenses-amount');
+        document.querySelectorAll('input').forEach(item => {
+            item.value = '';
+            if (item.checked) {
+                item.checked = false;
+            }
+            if (item.type === 'range') {
+                item.value = 1;
+                this.periodAmount();
+            }
+            resTargetMonth.value = 'Срок';
+        });
 
-        adIncomeItem[0].value = '';
-        adIncomeItem[1].value = '';    
-
-        allIncomeTitles[0].value = '';
-        if (allIncomeTitles[1] !== undefined) {
-            allIncomeTitles[1].value = '';
-        }
-        if (allIncomeTitles[2] !== undefined) {
-            allIncomeTitles[2].value = '';
-        }
-
-        allincomeAmounts[0].value = '';
-        if (allincomeAmounts[1] !== undefined){
-            allincomeAmounts[1].value = '';
-        }
-
-        if (allincomeAmounts[2] !== undefined){
-            allincomeAmounts[2].value = '';
-        }
-        
-        inputExpensesTitle[0].value = '';
-        if (inputExpensesTitle[1] !== undefined) {
-            inputExpensesTitle[1].value = '';
-        }
-        if (inputExpensesTitle[2] !== undefined) {
-            inputExpensesTitle[2].value = '';
-        }
-
-        inputExpensesAmount[0].value = '';
-        if (inputExpensesAmount[1] !== undefined) {
-            inputExpensesAmount[1].value = '';
-        }
-        if (inputExpensesAmount[2] !== undefined) {
-            inputExpensesAmount[2].value = '';
-        }
-
-        resTargetMonth.value = 'Срок';
 
         appData.showBtnStart();
     },
@@ -286,14 +248,8 @@ appData.periodAmount();
 expensesAdd.addEventListener('click', appData.addExpensesBlock);
 incomeAdd.addEventListener('click', appData.addIncomeBlock);
 
-let start1 = appData.start.bind(appData),
-reset1 = appData.reset.bind(appData);
-
-btnStart.addEventListener('click', start1);
-btnCancel.addEventListener('click', reset1);
+btnStart.addEventListener('click', appData.start);
+btnCancel.addEventListener('click', appData.reset);
 
 appData.accumulatedMonth = appData.getBudget();
-
-
-
 
